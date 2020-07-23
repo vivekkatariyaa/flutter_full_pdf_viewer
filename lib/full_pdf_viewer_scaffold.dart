@@ -58,7 +58,30 @@ class _PDFViewScaffoldState extends State<PDFViewerScaffold> {
     }
     return new Scaffold(
         appBar: widget.appBar,
-        body: const Center(child: const CircularProgressIndicator()));
+        body: Container(
+          
+        child:  Stack(
+   alignment: Alignment.center,
+          children: <Widget>[
+
+               
+           Container(
+      width: 200.0,
+      height: 300.0,
+      decoration: BoxDecoration(
+        color: Colors.black12,
+        border: Border.all(
+          color: Colors.black,
+          width: 3.0,
+        ),
+      ),
+    ),
+            ]  ),
+
+        
+        )
+
+        );
   }
 
   Rect _buildRect(BuildContext context) {
@@ -76,3 +99,4 @@ class _PDFViewScaffoldState extends State<PDFViewerScaffold> {
     return new Rect.fromLTWH(0.0, top, mediaQuery.size.width, height);
   }
 }
+
